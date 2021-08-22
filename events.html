@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">Exploring Events</h1>
+    <button onclick='handleClick()'>Click Me -0</button><br>
+    <button id="second">Click Me -1</button><br>
+    <button>Click Me -2</button><br>
+    <button id="lastPerson">Click Me -3</button>
+    <script>
+        document.getElementById('lastPerson').addEventListener('click',function(){
+            document.body.style.color = 'cyan';
+        });
+        
+    //     function handleClick(){
+    //         document.body.style.backgroundColor = 'tomato';
+    //     }
+    //    var secondButton = document.getElementById('second');
+    //    secondButton.addEventListener('click',handleClick);
+    //    secondButton.onclick = handleClick();
+    </script>
+</body>
+</html>

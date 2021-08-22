@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Dom</title>
+    <style>
+        article{
+            border:2px solid tomato;
+            border-radius:10px;
+            margin:10px;
+            padding:5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Exploring Dom</h1>
+            <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, fuga!</p>
+        </section>
+
+        <section>
+            <article class="special">
+                <h3>article-1</h3>
+                <p title="important" class="author" id="best seller">Author 1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eum at! Quibusdam a repudiandae fuga ipsum qui nam aut maxime perferendis veritatis, aperiam hic laudantium quo suscipit consequatur, non natus!</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">Author 2</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam porro autem molestiae exercitationem libero velit cum recusandae placeat et, mollitia distinctio. Atque placeat tenetur fugiat odit. Rerum, ab pariatur.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">Author 3</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus quia nisi minus. Repellendus architecto ipsam sint tenetur ab ea veritatis sapiente reiciendis, suscipit corporis aut delectus cupiditate consequatur ducimus?</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.body.style.backgroundColor = "lightblue";
+       var authors = document.querySelectorAll('.special h3');
+       for(var i=0; i<authors.length; i++){
+           var element = authors[i];
+           console.log(element.innerHTML);
+           element.innerHTML = 'lekhok-'+(i+1);
+           element.setAttribute('title','All Author is same');
+           element.style.backgroundColor = 'green';
+           element.style.margin = '10px';
+           console.log(authors);
+       }
+      
+    </script>
+</body>
+</html>
